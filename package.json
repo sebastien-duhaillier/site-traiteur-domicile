@@ -1,0 +1,20 @@
+{
+  "name": "site-traiteur-domicile",
+  "version": "1.0.0",
+  "description": "Site web pour traiteur à domicile",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["traiteur", "domicile", "express", "website"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "i": "^0.3.7"
+  }
+}
