@@ -1,3 +1,38 @@
+/* ========================================
+   VARIABLES CSS - COULEURS ORGANISÉES
+======================================== */
+:root {
+    /* Couleurs primaires */
+    --primary-color: #e74c3c;
+    --primary-hover: #af7670;
+    
+    /* Couleurs secondaires */
+    --secondary-color: #2c3e50;
+    --secondary-light: #34495e;
+    --secondary-dark: #1a252f;
+    
+    /* Couleurs d'arrière-plan */
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --bg-overlay: rgba(0,0,0,0.5);
+    
+    /* Couleurs de texte */
+    --text-primary: #333;
+    --text-white: #ffffff;
+    
+    /* Couleurs d'accentuation */
+    --accent-orange: #f39c12;
+    --accent-green: #dbf1e4;
+    
+    /* Ombres */
+    --shadow-light: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-medium: 0 5px 15px rgba(0,0,0,0.1);
+    --shadow-text: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* ========================================
+   RESET ET BASE
+======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -7,18 +42,21 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--text-primary);
 }
 
+/* ========================================
+   HEADER ET NAVIGATION
+======================================== */
 header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: white;
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-light));
+    color: var(--text-white);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-light);
 }
 
 nav {
@@ -33,7 +71,7 @@ nav {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
 .nav-links {
@@ -43,17 +81,20 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: var(--text-white);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
+/* ========================================
+   SECTION HERO
+======================================== */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f39c12" width="1200" height="600"/><circle fill="%23e74c3c" cx="300" cy="200" r="80"/><circle fill="%2327ae60" cx="900" cy="400" r="60"/></svg>');
+    background: linear-gradient(var(--bg-overlay), var(--bg-overlay)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f39c12" width="1200" height="600"/><circle fill="%23e74c3c" cx="300" cy="200" r="80"/><circle fill="%2327ae60" cx="900" cy="400" r="60"/></svg>');
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -61,13 +102,13 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: white;
+    color: var(--text-white);
 }
 
 .hero-content h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: var(--shadow-text);
 }
 
 .hero-content p {
@@ -78,8 +119,8 @@ nav {
 
 .btn {
     display: inline-block;
-    background: #e74c3c;
-    color: white;
+    background: var(--primary-color);
+    color: var(--text-white);
     padding: 1rem 2rem;
     text-decoration: none;
     border-radius: 5px;
@@ -88,9 +129,12 @@ nav {
 }
 
 .btn:hover {
-    background: #c0392b;
+    background: var(--primary-hover);
 }
 
+/* ========================================
+   SECTIONS PRINCIPALES
+======================================== */
 .section {
     padding: 4rem 2rem;
     max-width: 1200px;
@@ -101,9 +145,12 @@ nav {
     text-align: center;
     margin-bottom: 3rem;
     font-size: 2.5rem;
-    color: #2c3e50;
+    color: var(--secondary-color);
 }
 
+/* ========================================
+   SECTION SERVICES
+======================================== */
 .services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -112,11 +159,11 @@ nav {
 }
 
 .service-card {
-    background: white;
+    background: var(--bg-white);
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-medium);
     transition: transform 0.3s ease;
 }
 
@@ -127,11 +174,14 @@ nav {
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
-    color: #e74c3c;
+    color: var(--primary-color);
 }
 
+/* ========================================
+   SECTION À PROPOS
+======================================== */
 .about {
-    background: #f8f9fa;
+    background: var(--bg-light);
 }
 
 .about-content {
@@ -145,9 +195,12 @@ nav {
     font-size: 1.1rem;
 }
 
+/* ========================================
+   SECTION CONTACT
+======================================== */
 .contact {
-    background: #2c3e50;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--text-white);
 }
 
 .contact-info {
@@ -162,17 +215,23 @@ nav {
 }
 
 .contact-item h3 {
-    color: #e74c3c;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
+/* ========================================
+   FOOTER
+======================================== */
 footer {
-    background: #1a252f;
-    color: white;
+    background: var(--secondary-dark);
+    color: var(--text-white);
     text-align: center;
     padding: 2rem;
 }
 
+/* ========================================
+   MEDIA QUERIES - RESPONSIVE
+======================================== */
 @media (max-width: 768px) {
     .nav-links {
         display: none;
